@@ -4,16 +4,16 @@ import tensorflow as tf
 from tensorflow import keras
 from gensim.models.word2vec import Word2Vec
 from sklearn.model_selection import train_test_split
-from tensorflow.keras.utils import to_categorical
+#from tensorflow.keras.utils import to_categorical
 from keras.layers import Dense, Dropout, Conv1D, MaxPool1D, GlobalMaxPool1D, Embedding, Activation
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
 from keras.models import Sequential
 from sklearn import preprocessing
 import nltk     
-nltk.download('stopwords') 
-nltk.download('punkt')  
-nltk.download('words')                     
+#nltk.download('stopwords') 
+#nltk.download('punkt')  
+#nltk.download('words')                     
 #import matplotlib.pyplot as plt           
 import random
 import numpy as np
@@ -29,8 +29,8 @@ from nltk.corpus import words
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 import swifter
 
-model = tf.keras.models.load_model("D:/ana/sdkpps/model.h5")
-df1 = pd.read_csv('D:/ana/sdkpps/Text_Preprocessing_Depres_Suicide_990_Terbaru_Fix_3.csv').astype(str)
+model = tf.keras.models.load_model("./model.h5")
+df1 = pd.read_csv('./Text_Preprocessing_Depres_Suicide_990_Terbaru_Fix_3.csv').astype(str)
 df1.columns = ['Label', 'Post']
 df1.head()
 token = Tokenizer(2772)
@@ -39,7 +39,7 @@ token.fit_on_texts(df1['Post'])
 def ubah_text_lower(text):
     return text.lower()
     
-stop = pd.read_csv("D:/ana/sdkpps/stopwords.txt", names= ["stopwords"], header = None)
+stop = pd.read_csv("./stopwords.txt", names= ["stopwords"], header = None)
 stop_words_corpus = list(stopwords.words('indonesian'))
 stop_from_list = stop['stopwords'].to_list()
 def hapus_stopwords(post):
@@ -59,7 +59,7 @@ def preprocess_filtered(post):
 def tokenkan(text):
     return word_tokenize(text)
 
-normalizad_word = pd.read_excel("D:/ana/sdkpps/normalisasi.xlsx")
+normalizad_word = pd.read_excel("./normalisasi.xlsx")
 normalizad_word_dict = {}
 for index, row in normalizad_word.iterrows():
     if row[0] not in normalizad_word_dict:

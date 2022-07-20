@@ -1,0 +1,9 @@
+Django==4.0.6
+gunicorn==20.1.0
+sklearn
+gensim==4.1.2
+keras==2.8.0
+Sastrawi==1.0.1
+swifter==1.0.9
+tensorflow==2.8.2
+nltk==3.7
