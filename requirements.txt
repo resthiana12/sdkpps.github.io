@@ -7,3 +7,5 @@ Sastrawi==1.0.1
 swifter==1.0.9
 tensorflow==2.8.2
 nltk==3.7
+psycopg2
+django-heroku
