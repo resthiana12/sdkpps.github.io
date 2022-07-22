@@ -4,6 +4,7 @@ gensim
 gunicorn
 keras==2.8.0
 sklearn
+openpyxl
 Sastrawi
 swifter
 nltk==3.7
