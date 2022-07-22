@@ -14,10 +14,10 @@ from pathlib import Path
 import os
 import sys
 from os.path import abspath, dirname, join
-import django_heroku
+#import django_heroku
 
 #Activate Django-Heroku.
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -41,8 +41,15 @@ SECRET_KEY = 'django-insecure-yt2sq6a-wj9pw)m1^9trpc%*)ck6@3mu(^-_$rurmwxe+(bhs^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '*',
+    'http://sdkpps.herokuapp.com/',
+    'https://sdkpps.herokuapp.com/',
+    'sdkpps.herokuapp.com',
+    'sdkpps.herokuapp.com/', # your herokuapp url
+    '127.0.0.1'
+]
 
 # Application definition
 
