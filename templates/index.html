@@ -3,32 +3,65 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <title>SPKPPSM</title>
+    <style>
+      .form-control { 
+        min-width: 100%; 
+        min-height: 100%;
+      }
+      form{
+        min-width: 80%;
+        min-height: 80%;
+      }
+      button{
+        margin-top: -10px;
+      }
+      @media screen and (max-width: 500px) {
+        .navbar-brand{
+          overflow-wrap: break-word;
+          font-size: 12px;
+        }
+        .judul{
+          font-size: 12px;
+        }
+        .judul h3{
+          font-size: 15px;
+        }
+        .btn-primary{
+          font-size: 12px;
+        }
+      }
+    </style>
   </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-light bg-light">
+  <nav class="navbar navbar-dark bg-primary">
     <span class="navbar-brand mb-0 h1">Sistem Prediksi Kelainan Psikologis Pengguna Sosial Media</span>
   </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class='container-fluid mt-5 text-center judul'>
+        <h3 class="font-weight-bold">Cek Postingan</h3>
+        <i>Copy dan paste post sosial media dari facebook, instagram, atau twitter untuk memprediksi apakah user mengidap kelainan psikologis</i>
+      </div>
 
-	 <div class='container-fluid mt-5 text-center'>
-		<h3 class="font-weight-bold">Cek Postingan</h3>
-		<i>Copy dan paste post sosial media dari facebook, instagram, atau twitter untuk memprediksi apakah user mengidap kelainan psikologis</i>
-	 </div>
-	 <div class="col align-self-center mt-4"> 
-    <div class="d-flex justify-content-center">
-      <form action='/classify' method='get'>
-        <textarea name='text' cols="150" rows="15" style="margin: 0px; " ></textarea><br>
-          <button type='submit' class='btn btn-primary'>Prediksi Post</button>
-      </form>
+      <div class="col align-self-center mt-4"> 
+        <div class="container-md h-100 d-flex align-items-center justify-content-center">
+          <form action='/classify' method='get'>
+            <div class="form-group">
+              <textarea name='text' class="form-control" rows="10%"></textarea><br>
+            </div>
+            <button type='submit' class='btn btn-primary'>Prediksi Post</button>
+          </form>
+        </div>
+      </div>
     </div>
-   </div>
-   
+  </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
