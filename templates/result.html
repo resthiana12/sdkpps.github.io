@@ -13,21 +13,38 @@
         margin-top: 50px;
         padding: 10px;
       }
+      button{
+        margin-top: -10px;
+      }
+      @media screen and (max-width: 500px) {
+        .navbar-brand{
+          overflow-wrap: break-word;
+          font-size: 12px;
+        }
+        .btn-primary{
+          font-size: 12px;
+        }
+        .card{
+          font-size: 14px;
+        }
+      }
     </style>
     
     <body>
-      <nav class="navbar navbar-light bg-light">
+      <!-- Navbar -->
+      <nav class="navbar navbar-dark bg-primary">
         <span class="navbar-brand mb-0 h1">Sistem Deteksi Kelainan Psikologis Pengguna Sosial Media</span>
       </nav>
+
       <div class="container-fluid">
-        <div class="row justify-content-center mt-5">
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Hasil deteksi post :</h5>
-                <p class="card-text">User {{ Category }}</p>
-                <a href="{% url 'index' %}" role="button" class="btn btn-primary">Kembali</a>
-              </div>
+        <div class="row">
+          <div class="col-sm-4 align-self-center mt-4 container-md h-100 d-flex align-items-center justify-content-center">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Hasil deteksi post :</h5>
+                  <p class="card-text">User {{ Category }}</p>
+                  <a href="{% url 'index' %}" role="button" class="btn btn-primary">Kembali</a>
+                </div>
             </div>
           </div>
         </div>
