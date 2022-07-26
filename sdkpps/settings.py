@@ -44,10 +44,10 @@ DEBUG = True
 #ALLOWED_HOSTS = []
 ALLOWED_HOSTS = [
     '*',
-    'http://sdkpps.herokuapp.com/',
-    'https://sdkpps.herokuapp.com/',
-    'sdkpps.herokuapp.com',
-    'sdkpps.herokuapp.com/', # your herokuapp url
+    'http://spkpps.herokuapp.com/',
+    'https://spkpps.herokuapp.com/',
+    'spkpps.herokuapp.com',
+    'spkpps.herokuapp.com/', # your herokuapp url
     '127.0.0.1'
 ]
 
